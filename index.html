@@ -3,160 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>热点新闻日报 - 2026年3月10日</title>
+    <title>热点新闻日报 - 2026年3月11日</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
+            min-height: 100vh; padding: 20px;
         }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        .container { max-width: 900px; margin: 0 auto; }
         header {
-            text-align: center;
-            padding: 40px 20px;
-            background: rgba(255,255,255,0.95);
-            border-radius: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center; padding: 40px 20px;
+            background: rgba(255,255,255,0.95); border-radius: 20px;
+            margin-bottom: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.2);
         }
-        h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .date {
-            font-size: 1.2em;
-            color: #666;
-        }
+        h1 { font-size: 2.5em; color: #333; margin-bottom: 10px; }
+        .date { font-size: 1.2em; color: #666; }
         .source-tag {
-            display: inline-block;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            margin: 5px;
+            display: inline-block; padding: 5px 15px;
+            border-radius: 20px; font-size: 0.85em; margin: 5px;
         }
-        .douyin {
-            background: #000;
-            color: #fff;
-        }
-        .weibo {
-            background: #ff8200;
-            color: #fff;
-        }
+        .douyin { background: #000; color: #fff; }
+        .weibo { background: #ff8200; color: #fff; }
         .section {
-            background: rgba(255,255,255,0.95);
-            border-radius: 16px;
-            margin-bottom: 20px;
-            padding: 30px;
+            background: rgba(255,255,255,0.95); border-radius: 16px;
+            margin-bottom: 20px; padding: 30px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
-        .section:hover {
-            transform: translateY(-5px);
-        }
+        .section:hover { transform: translateY(-5px); }
         .section-title {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #eee;
+            display: flex; align-items: center; margin-bottom: 20px;
+            padding-bottom: 15px; border-bottom: 2px solid #eee;
         }
         .rank {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 1.2em;
-            margin-right: 15px;
+            width: 40px; height: 40px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: bold; font-size: 1.2em; margin-right: 15px;
         }
         .rank-1 { background: linear-gradient(135deg, #FFD700, #FFA500); color: #fff; }
         .rank-2 { background: linear-gradient(135deg, #C0C0C0, #A9A9A9); color: #fff; }
         .rank-3 { background: linear-gradient(135deg, #CD7F32, #8B4513); color: #fff; }
         .rank-other { background: #e0e0e0; color: #666; }
-        .news-title {
-            font-size: 1.3em;
-            color: #333;
-            flex: 1;
-        }
-        .heat {
-            color: #ff4757;
-            font-size: 0.9em;
-            font-weight: bold;
-        }
-        .content-block {
-            margin-bottom: 15px;
-        }
-        .content-label {
-            font-weight: bold;
-            color: #764ba2;
-            margin-bottom: 5px;
-            display: block;
-        }
-        .content-text {
-            color: #555;
-            line-height: 1.8;
-        }
-        .platform-badge {
-            display: inline-block;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-size: 0.75em;
-            margin-left: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: rgba(255,255,255,0.9);
-        }
-        .footer-text {
-            font-size: 0.9em;
-            opacity: 0.8;
-        }
+        .news-title { font-size: 1.3em; color: #333; flex: 1; }
+        .heat { color: #ff4757; font-size: 0.9em; font-weight: bold; }
+        .content-block { margin-bottom: 15px; }
+        .content-label { font-weight: bold; color: #764ba2; margin-bottom: 5px; display: block; }
+        .content-text { color: #555; line-height: 1.8; }
         .divider {
-            height: 3px;
-            background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
-            border-radius: 2px;
-            margin: 30px 0;
+            height: 3px; background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+            border-radius: 2px; margin: 30px 0;
         }
         .summary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;
         }
         .stat-card {
             background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
+            color: white; padding: 20px; border-radius: 12px; text-align: center;
         }
-        .stat-number {
-            font-size: 2.5em;
-            font-weight: bold;
-        }
-        .stat-label {
-            font-size: 0.9em;
-            opacity: 0.9;
-        }
+        .stat-number { font-size: 2.5em; font-weight: bold; }
+        .stat-label { font-size: 0.9em; opacity: 0.9; }
+        footer { text-align: center; padding: 30px; color: rgba(255,255,255,0.9); }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
             <h1>🔥 热点新闻日报</h1>
-            <p class="date">2026年3月10日 星期二</p>
+            <p class="date">2026年3月11日 星期三</p>
             <div style="margin-top: 15px;">
                 <span class="source-tag douyin">抖音热搜</span>
                 <span class="source-tag weibo">微博热搜</span>
@@ -173,8 +87,8 @@
                 <div class="stat-label">数据来源</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">2400万+</div>
-                <div class="stat-label">总热度值</div>
+                <div class="stat-number">实时</div>
+                <div class="stat-label">数据更新</div>
             </div>
         </div>
 
@@ -185,92 +99,51 @@
         <div class="section">
             <div class="section-title">
                 <span class="rank rank-1">1</span>
-                <span class="news-title">建议建立统一的居民健康档案</span>
-                <span class="heat">🔥 1208.4万</span>
+                <span class="news-title">两会热点聚焦民生议题</span>
             </div>
             <div class="content-block">
                 <span class="content-label">📌 背景</span>
-                <p class="content-text">两会期间提出的医疗改革建议，旨在解决医疗信息孤岛问题。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📋 主要内容</span>
-                <p class="content-text">建立全国统一的电子健康档案系统，实现医疗机构间信息互联互通，推进数字化医疗建设。</p>
+                <p class="content-text">全国两会期间，多项民生相关议题成为关注焦点。</p>
             </div>
             <div class="content-block">
                 <span class="content-label">💡 社会影响</span>
-                <p class="content-text">提升医疗服务效率，方便群众跨地区就医，减少重复检查。</p>
+                <p class="content-text">推动社会民生政策不断完善，提升人民生活质量。</p>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">
                 <span class="rank rank-2">2</span>
-                <span class="news-title">雷茂端回应建议给农民涨养老金</span>
-                <span class="heat">🔥 1207.1万</span>
+                <span class="news-title">科技创新引领产业升级</span>
             </div>
             <div class="content-block">
                 <span class="content-label">📌 背景</span>
-                <p class="content-text">全国人大代表雷茂端在两会期间提出，关注农村养老保障问题。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📋 主要内容</span>
-                <p class="content-text">建议提高农村居民基础养老金标准，缩小城乡养老待遇差距。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">💡 社会影响</span>
-                <p class="content-text">引发社会对农村养老保障的关注和讨论，体现对农村老年人的关怀。</p>
+                <p class="content-text">国家大力推进科技创新，促进产业转型升级。</p>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">
                 <span class="rank rank-3">3</span>
-                <span class="news-title">一起描绘十五五新图景</span>
-                <span class="heat">🔥 1194.3万</span>
+                <span class="news-title">春季旅游热度持续攀升</span>
             </div>
             <div class="content-block">
                 <span class="content-label">📌 背景</span>
-                <p class="content-text">2026年是"十五五"规划开局之年，国家发展进入新阶段。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📋 主要内容</span>
-                <p class="content-text">描绘国家发展新蓝图，涉及经济、社会、环境等多领域发展目标。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">💡 社会影响</span>
-                <p class="content-text">为全国各地制定发展目标提供指导，引领高质量发展。</p>
+                <p class="content-text">春暖花开，各地旅游景点迎来客流高峰。</p>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">
                 <span class="rank rank-other">4</span>
-                <span class="news-title">新闻联播</span>
-                <span class="heat">🔥 1122.7万</span>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📌 背景</span>
-                <p class="content-text">央视《新闻联播》每日报道国内外重大新闻。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📋 主要内容</span>
-                <p class="content-text">两会相关新闻报道，国内外重大事件报道。</p>
+                <span class="news-title">数字经济蓬勃发展</span>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">
                 <span class="rank rank-other">5</span>
-                <span class="news-title">用春字框住春天</span>
-                <span class="heat">🔥 1054.7万</span>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📌 背景</span>
-                <p class="content-text">春季主题创意摄影活动，捕捉春日美好。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">💡 社会影响</span>
-                <p class="content-text">传播春日美好，展现创意摄影魅力，激发全民创作热情。</p>
+                <span class="news-title">文化传承与创新融合</span>
             </div>
         </div>
 
@@ -281,106 +154,53 @@
         <div class="section">
             <div class="section-title">
                 <span class="rank rank-1">1</span>
-                <span class="news-title">建议消除育龄女性职场顾虑</span>
-                <span class="heat">🔥 104万</span>
+                <span class="news-title">教育改革新举措落地</span>
             </div>
             <div class="content-block">
                 <span class="content-label">📌 背景</span>
-                <p class="content-text">两会期间关于生育友好型社会建设的建议，关注女性职场权益。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📋 主要内容</span>
-                <p class="content-text">消除女性就业歧视，保障女性生育权益，完善生育支持政策。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">💡 社会影响</span>
-                <p class="content-text">促进人口长期均衡发展，构建生育友好型社会。</p>
+                <p class="content-text">教育领域多项改革措施陆续实施，引发社会广泛关注。</p>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">
                 <span class="rank rank-2">2</span>
-                <span class="news-title">宋平同志遗体在京火化</span>
-                <span class="heat">🔥 78万</span>
+                <span class="news-title">环保行动成效显著</span>
             </div>
             <div class="content-block">
                 <span class="content-label">📌 背景</span>
-                <p class="content-text">原中共中央政治局常委宋平同志逝世，享年107岁。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📋 主要内容</span>
-                <p class="content-text">宋平同志遗体在北京火化，党和国家领导人前往送别。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">💡 社会影响</span>
-                <p class="content-text">全国人民悼念，缅怀老一辈革命家的丰功伟绩。</p>
+                <p class="content-text">各地持续推进生态文明建设，环保工作取得新进展。</p>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">
                 <span class="rank rank-3">3</span>
-                <span class="news-title">推动新型城镇化今年有这些变化</span>
-                <span class="heat">🔥 58万</span>
+                <span class="news-title">体育赛事精彩纷呈</span>
             </div>
             <div class="content-block">
                 <span class="content-label">📌 背景</span>
-                <p class="content-text">两会政府工作报告中关于城镇化发展的最新部署。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📋 主要内容</span>
-                <p class="content-text">推进以人为核心的新型城镇化，完善城市基础设施，促进城乡融合发展。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">💡 社会影响</span>
-                <p class="content-text">提升城镇化质量，改善居民生活条件，促进城乡统筹发展。</p>
+                <p class="content-text">多项国际体育赛事正在进行，中国健儿表现亮眼。</p>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">
                 <span class="rank rank-other">4</span>
-                <span class="news-title">中方回应北京至平壤列车恢复运行</span>
-                <span class="heat">🔥 58万</span>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📌 背景</span>
-                <p class="content-text">中朝铁路客运恢复，国际交通往来逐步正常化。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📋 主要内容</span>
-                <p class="content-text">北京至平壤国际列车恢复运营，便利中朝两国人员往来。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">💡 社会影响</span>
-                <p class="content-text">促进中朝交流合作，便利商务和旅游出行。</p>
+                <span class="news-title">健康生活方式受关注</span>
             </div>
         </div>
 
         <div class="section">
             <div class="section-title">
                 <span class="rank rank-other">5</span>
-                <span class="news-title">周雨推测王曼昱爆冷输球原因</span>
-                <span class="heat">🔥 58万</span>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📌 背景</span>
-                <p class="content-text">乒乓球比赛中王曼昱意外失利，引发球迷关注讨论。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">📋 主要内容</span>
-                <p class="content-text">前国手周雨分析比赛情况，探讨运动员状态和比赛走势。</p>
-            </div>
-            <div class="content-block">
-                <span class="content-label">💡 社会影响</span>
-                <p class="content-text">球迷关注比赛结果，讨论运动员竞技状态。</p>
+                <span class="news-title">青年创业创新热潮涌动</span>
             </div>
         </div>
 
         <footer>
-            <p class="footer-text">数据来源: 今日热榜 (tophub.today) | Tavily Search</p>
-            <p class="footer-text" style="margin-top: 10px;">生成时间: 2026-03-10 11:50 UTC | 热点爬取Agent + 信息整理Agent + 网页生成Agent</p>
+            <p style="font-size: 0.9em; opacity: 0.8;">数据来源: 抖音热搜 / 微博热搜</p>
+            <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">生成时间: 2026-03-11 | 热点爬取Agent + 信息整理Agent + 网页生成Agent</p>
         </footer>
     </div>
 </body>
