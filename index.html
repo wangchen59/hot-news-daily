@@ -3,258 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>热搜榜 - 2026年3月12日 00:00 UTC</title>
+    <title>今日热点新闻 - 2026年3月12日</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
-        
         .container {
             max-width: 900px;
             margin: 0 auto;
         }
-        
         header {
             text-align: center;
             color: white;
             padding: 30px 0;
         }
-        
-        h1 {
+        header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
-        
-        .update-time {
-            font-size: 0.9em;
+        header .time {
+            font-size: 1.1em;
             opacity: 0.9;
         }
-        
-        .source-section {
+        .card {
             background: white;
             border-radius: 16px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            overflow: hidden;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
         }
-        
-        .source-header {
-            padding: 20px 25px;
-            color: white;
-            font-size: 1.3em;
-            font-weight: bold;
+        .card h2 {
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-        
-        .source-header.douyin {
-            background: linear-gradient(135deg, #000000 0%, #333333 100%);
-        }
-        
-        .source-header.weibo {
-            background: linear-gradient(135deg, #ff8200 0%, #ff5722 100%);
-        }
-        
-        .source-icon {
             font-size: 1.5em;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
         }
-        
+        .card h2 .icon {
+            font-size: 1.3em;
+        }
+        .weibo h2 { color: #e6162d; }
+        .douyin h2 { color: #000000; }
         .news-list {
             list-style: none;
-            padding: 0;
         }
-        
         .news-item {
-            padding: 18px 25px;
-            border-bottom: 1px solid #f0f0f0;
             display: flex;
             align-items: flex-start;
-            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid #f5f5f5;
             transition: background 0.2s;
         }
-        
-        .news-item:hover {
-            background: #f8f9fa;
-        }
-        
         .news-item:last-child {
             border-bottom: none;
         }
-        
-        .rank {
-            font-size: 1.4em;
-            font-weight: bold;
-            min-width: 35px;
-            text-align: center;
+        .news-item:hover {
+            background: #fafafa;
+            border-radius: 8px;
+            margin: 0 -10px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
-        
-        .rank.top1 { color: #ff4757; }
-        .rank.top2 { color: #ff6b81; }
-        .rank.top3 { color: #ffa502; }
-        .rank.top4 { color: #747d8c; }
-        .rank.top5 { color: #747d8c; }
-        
+        .rank {
+            min-width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.1em;
+            border-radius: 50%;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        .rank-1 { background: linear-gradient(135deg, #ffd700, #ffec8b); color: #8b6914; }
+        .rank-2 { background: linear-gradient(135deg, #c0c0c0, #e8e8e8); color: #555; }
+        .rank-3 { background: linear-gradient(135deg, #cd7f32, #daa06d); color: #fff; }
+        .rank-other { background: #f0f0f0; color: #666; }
         .news-content {
             flex: 1;
         }
-        
         .news-title {
             font-size: 1.05em;
-            color: #2d3436;
-            line-height: 1.5;
+            color: #333;
             text-decoration: none;
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 5px;
+            line-height: 1.4;
         }
-        
         .news-title:hover {
             color: #667eea;
         }
-        
         .news-meta {
-            font-size: 0.85em;
-            color: #636e72;
+            font-size: 0.9em;
+            color: #999;
         }
-        
-        .hot-value {
-            background: linear-gradient(135deg, #ff6b6b 0%, #ffa502 100%);
-            color: white;
-            padding: 2px 10px;
-            border-radius: 20px;
-            font-size: 0.8em;
+        .news-meta .heat {
+            color: #ff6b6b;
             font-weight: 500;
         }
-        
-        footer {
+        .news-meta .author {
+            color: #666;
+        }
+        .footer {
             text-align: center;
             color: white;
             padding: 30px 0;
             opacity: 0.8;
+            font-size: 0.9em;
         }
-        
-        footer a {
+        .footer a {
             color: white;
         }
-        
         @media (max-width: 600px) {
-            h1 { font-size: 1.8em; }
-            .news-item { padding: 15px; }
-            .rank { font-size: 1.2em; min-width: 30px; }
+            header h1 { font-size: 1.8em; }
+            .card { padding: 15px; }
+            .news-item { flex-direction: column; }
+            .rank { margin-bottom: 10px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🔥 今日热搜榜</h1>
-            <p class="update-time">更新时间: 2026年3月12日 08:00 (北京时间)</p>
+            <h1>🔥 今日热点新闻</h1>
+            <p class="time">2026年3月12日 03:00 UTC</p>
         </header>
-        
-        <section class="source-section">
-            <div class="source-header douyin">
-                <span class="source-icon">🎵</span>
-                抖音热搜 Top 5
-            </div>
+
+        <div class="card weibo">
+            <h2><span class="icon">📱</span> 新浪微博热搜榜 TOP 5</h2>
             <ul class="news-list">
                 <li class="news-item">
-                    <span class="rank top1">1</span>
+                    <span class="rank rank-1">1</span>
                     <div class="news-content">
-                        <a href="https://tophub.today/n/DpQvNABoNE" class="news-title" target="_blank">大反转！国际油价由暴涨转为大跌！截至北京时间3月10日上午11点，纽约商品交易所4月交货的轻质原油期货价格最低跌至每桶84.43美元</a>
-                        <div class="news-meta"><span class="hot-value">🔥 4666万播放</span></div>
+                        <a href="https://s.weibo.com/weibo?q=韩国女团" class="news-title" target="_blank">韩国女团</a>
+                        <p class="news-meta"><span class="heat">🔥 1838万</span> 热度</p>
                     </div>
                 </li>
                 <li class="news-item">
-                    <span class="rank top2">2</span>
+                    <span class="rank rank-2">2</span>
                     <div class="news-content">
-                        <a href="https://tophub.today/n/DpQvNABoNE" class="news-title" target="_blank">你是否在雪山上救过……#抖抖好生活 #哲学</a>
-                        <div class="news-meta"><span class="hot-value">🔥 4422万播放</span></div>
+                        <a href="https://s.weibo.com/weibo?q=文俊辉徐明浩回国" class="news-title" target="_blank">文俊辉徐明浩回国</a>
+                        <p class="news-meta"><span class="heat">🔥 1653万</span> 热度</p>
                     </div>
                 </li>
                 <li class="news-item">
-                    <span class="rank top3">3</span>
+                    <span class="rank rank-3">3</span>
                     <div class="news-content">
-                        <a href="https://tophub.today/n/DpQvNABoNE" class="news-title" target="_blank">饭店的寒假工，大V探店免单吗？#Za有色面霜 #DOU群星闪耀时</a>
-                        <div class="news-meta"><span class="hot-value">🔥 3818万播放</span></div>
+                        <a href="https://s.weibo.com/weibo?q=周深自曝去看了大鱼海棠" class="news-title" target="_blank">周深自曝去看了大鱼海棠</a>
+                        <p class="news-meta"><span class="heat">🔥 991万</span> 热度</p>
                     </div>
                 </li>
                 <li class="news-item">
-                    <span class="rank top4">4</span>
+                    <span class="rank rank-other">4</span>
                     <div class="news-content">
-                        <a href="https://tophub.today/n/DpQvNABoNE" class="news-title" target="_blank">饭店的寒假工，推销海鲜！</a>
-                        <div class="news-meta"><span class="hot-value">🔥 3274万播放</span></div>
+                        <a href="https://s.weibo.com/weibo?q=孟晚舟建议中国不能赌英伟达" class="news-title" target="_blank">孟晚舟建议中国不能赌英伟达</a>
+                        <p class="news-meta"><span class="heat">🔥 854万</span> 热度</p>
                     </div>
                 </li>
                 <li class="news-item">
-                    <span class="rank top5">5</span>
+                    <span class="rank rank-other">5</span>
                     <div class="news-content">
-                        <a href="https://tophub.today/n/DpQvNABoNE" class="news-title" target="_blank">带你回到18年！</a>
-                        <div class="news-meta"><span class="hot-value">🔥 1688万播放</span></div>
+                        <a href="https://s.weibo.com/weibo?q=网飞三体" class="news-title" target="_blank">网飞三体</a>
+                        <p class="news-meta"><span class="heat">🔥 833万</span> 热度</p>
                     </div>
                 </li>
             </ul>
-        </section>
-        
-        <section class="source-section">
-            <div class="source-header weibo">
-                <span class="source-icon">📢</span>
-                新浪微博热搜 Top 5
-            </div>
+        </div>
+
+        <div class="card douyin">
+            <h2><span class="icon">🎵</span> 抖音总榜 TOP 5</h2>
             <ul class="news-list">
                 <li class="news-item">
-                    <span class="rank top1">1</span>
+                    <span class="rank rank-1">1</span>
                     <div class="news-content">
-                        <a href="https://s.weibo.com/weibo?q=委员回应年轻人天天熬夜行不行" class="news-title" target="_blank">委员回应年轻人天天熬夜行不行</a>
-                        <div class="news-meta"><span class="hot-value">🔥 49万热度</span></div>
+                        <a href="https://www.douyin.com/video/7615622615949178767" class="news-title" target="_blank">饭店的寒假工，客人逃单！</a>
+                        <p class="news-meta"><span class="author">👤 周小闹</span> · <span class="heat">🔥 4553万</span> 播放</p>
                     </div>
                 </li>
                 <li class="news-item">
-                    <span class="rank top2">2</span>
+                    <span class="rank rank-2">2</span>
                     <div class="news-content">
-                        <a href="https://s.weibo.com/weibo?q=建议年假天数按工龄递增" class="news-title" target="_blank">建议年假天数按工龄递增</a>
-                        <div class="news-meta"><span class="hot-value">🔥 36万热度</span></div>
+                        <a href="https://www.douyin.com/video/7615651386118515899" class="news-title" target="_blank">露西你到底在哪，我和娜塔莎被家暴了</a>
+                        <p class="news-meta"><span class="author">👤 蔡大伯Charisse</span> · <span class="heat">🔥 2506万</span> 播放</p>
                     </div>
                 </li>
                 <li class="news-item">
-                    <span class="rank top3">3</span>
+                    <span class="rank rank-3">3</span>
                     <div class="news-content">
-                        <a href="https://s.weibo.com/weibo?q=解读国家账本看数字背后" class="news-title" target="_blank">解读国家账本看数字背后</a>
-                        <div class="news-meta"><span class="hot-value">🔥 28万热度</span></div>
+                        <a href="https://www.douyin.com/video/7615346642601997760" class="news-title" target="_blank">饭店的寒假工，大V探店免单吗？</a>
+                        <p class="news-meta"><span class="author">👤 周小闹</span> · <span class="heat">🔥 2212万</span> 播放</p>
                     </div>
                 </li>
                 <li class="news-item">
-                    <span class="rank top4">4</span>
+                    <span class="rank rank-other">4</span>
                     <div class="news-content">
-                        <a href="https://s.weibo.com/weibo?q=王濛拟被破格晋升" class="news-title" target="_blank">王濛拟被破格晋升</a>
-                        <div class="news-meta"><span class="hot-value">🔥 26万热度</span></div>
+                        <a href="https://www.douyin.com/video/7615527493194015141" class="news-title" target="_blank">13岁重庆霹雳舞少年，在法国斩获得世界冠军</a>
+                        <p class="news-meta"><span class="author">👤 蛇小男</span> · <span class="heat">🔥 1830万</span> 播放</p>
                     </div>
                 </li>
                 <li class="news-item">
-                    <span class="rank top5">5</span>
+                    <span class="rank rank-other">5</span>
                     <div class="news-content">
-                        <a href="https://s.weibo.com/weibo?q=精灵黄lululemon发圈被炒到999元" class="news-title" target="_blank">精灵黄lululemon发圈被炒到999元</a>
-                        <div class="news-meta"><span class="hot-value">🔥 25万热度</span></div>
+                        <a href="https://www.douyin.com/video/7612976586812449158" class="news-title" target="_blank">愿新年胜旧年</a>
+                        <p class="news-meta"><span class="author">👤 张大胆</span> · <span class="heat">🔥 1513万</span> 播放</p>
                     </div>
                 </li>
             </ul>
-        </section>
-        
-        <footer>
-            <p>数据来源: 抖音热搜榜、新浪微博热搜榜</p>
-            <p style="margin-top: 10px;">
-                <a href="https://github.com/wangchen59/hot-news-daily" target="_blank">GitHub</a> | 
-                自动更新 · 每日11:00 & 16:00
-            </p>
+        </div>
+
+        <footer class="footer">
+            <p>数据来源：<a href="https://tophub.today" target="_blank">今日热榜</a> · 微博热搜 · 抖音热榜</p>
+            <p style="margin-top: 10px;">每小时自动更新 | 生成时间: 2026-03-12 03:00 UTC</p>
         </footer>
     </div>
 </body>

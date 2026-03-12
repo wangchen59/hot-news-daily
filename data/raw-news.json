@@ -1,0 +1,80 @@
+{
+  "fetchTime": "2026-03-12T03:01:00Z",
+  "weibo": {
+    "source": "新浪微博热搜榜",
+    "sourceUrl": "https://tophub.today/n/KqndgxeLl9",
+    "items": [
+      {
+        "rank": 1,
+        "title": "韩国女团",
+        "heat": 18383928,
+        "url": "https://s.weibo.com/weibo?q=韩国女团"
+      },
+      {
+        "rank": 2,
+        "title": "文俊辉徐明浩回国",
+        "heat": 16531859,
+        "url": "https://s.weibo.com/weibo?q=文俊辉徐明浩回国"
+      },
+      {
+        "rank": 3,
+        "title": "周深自曝去看了大鱼海棠",
+        "heat": 9908709,
+        "url": "https://s.weibo.com/weibo?q=周深自曝去看了大鱼海棠"
+      },
+      {
+        "rank": 4,
+        "title": "孟晚舟建议中国不能赌英伟达",
+        "heat": 8536982,
+        "url": "https://s.weibo.com/weibo?q=孟晚舟建议中国不能赌英伟达"
+      },
+      {
+        "rank": 5,
+        "title": "网飞三体",
+        "heat": 8328665,
+        "url": "https://s.weibo.com/weibo?q=网飞三体"
+      }
+    ]
+  },
+  "douyin": {
+    "source": "抖音总榜",
+    "sourceUrl": "https://tophub.today/n/DpQvNABoNE",
+    "items": [
+      {
+        "rank": 1,
+        "title": "饭店的寒假工，客人逃单！",
+        "heat": 45528036,
+        "author": "周小闹",
+        "url": "https://www.douyin.com/video/7615622615949178767"
+      },
+      {
+        "rank": 2,
+        "title": "露西你到底在哪，我和娜塔莎被家暴了",
+        "heat": 25062449,
+        "author": "蔡大伯Charisse.𓃰",
+        "url": "https://www.douyin.com/video/7615651386118515899"
+      },
+      {
+        "rank": 3,
+        "title": "饭店的寒假工，大V探店免单吗？",
+        "heat": 22118616,
+        "author": "周小闹",
+        "url": "https://www.douyin.com/video/7615346642601997760"
+      },
+      {
+        "rank": 4,
+        "title": "13岁重庆霹雳舞少年，在法国斩获得世界冠军",
+        "heat": 18299112,
+        "author": "蛇小男",
+        "url": "https://www.douyin.com/video/7615527493194015141"
+      },
+      {
+        "rank": 5,
+        "title": "愿新年胜旧年",
+        "heat": 15131745,
+        "author": "张大胆",
+        "url": "https://www.douyin.com/video/7612976586812449158"
+      }
+    ]
+  }
+}
