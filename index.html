@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今日热搜 - 2026 年 3 月 13 日</title>
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --secondary-color: #3498db;
+            --bg-color: #f5f6fa;
+            --card-bg: #ffffff;
+            --text-primary: #2c3e50;
+            --text-secondary: #7f8c8d;
+            --border-radius: 12px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header .date {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        .news-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .news-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .news-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .news-rank {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-color), #c0392b);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 2px 10px rgba(231, 76, 60, 0.4);
+        }
+
+        .news-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            padding-right: 50px;
+        }
+
+        .news-content {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .news-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding: 20px;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .news-title {
+                font-size: 1.2rem;
+                padding-right: 0;
+            }
+
+            .news-rank {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+                top: 10px;
+                right: 10px;
+            }
+
+            .news-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔥 今日热搜</h1>
+            <div class="date">📅 2026 年 3 月 13 日</div>
+        </header>
+
+        <div class="news-list">
+            <!-- 新闻 1 -->
+            <article class="news-card">
+                <div class="news-rank">1</div>
+                <h2 class="news-title">美国对进口钢铝征收 25% 关税</h2>
+                <p class="news-content">
+                    2025 年 3 月 12 日，美国总统特朗普签署行政命令，对所有进口钢铝产品征收 25% 关税，后对加拿大加征额外关税，总税率达 50%。
+                </p>
+                <div class="news-tags">
+                    <span class="tag">税率 25%-50%</span>
+                    <span class="tag">影响 1473 亿美元进口</span>
+                    <span class="tag">多国反对</span>
+                </div>
+            </article>
+
+            <!-- 新闻 2 -->
+            <article class="news-card">
+                <div class="news-rank">2</div>
+                <h2 class="news-title">男子为泄愤放火烧自家房屋被判刑</h2>
+                <p class="news-content">
+                    昌吉男子王某因家庭矛盾和工作不顺，为泄愤点燃自家房屋。法院认定放火罪，判处有期徒刑四年。
+                </p>
+                <div class="news-tags">
+                    <span class="tag">放火罪</span>
+                    <span class="tag">有期徒刑四年</span>
+                    <span class="tag">烧自家房也危害公共安全</span>
+                </div>
+            </article>
+
+            <!-- 新闻 3 -->
+            <article class="news-card">
+                <div class="news-rank">3</div>
+                <h2 class="news-title">男子举报纪委干部 400 天后才立案？官方回应</h2>
+                <p class="news-content">
+                    男子举报纪委干部 400 天后收到立案通知。官方回应称程序合规但需提高效率。
+                </p>
+                <div class="news-tags">
+                    <span class="tag">400 天</span>
+                    <span class="tag">程序合规但需提效</span>
+                    <span class="tag">举报时效性受关注</span>
+                </div>
+            </article>
+
+            <!-- 新闻 4 -->
+            <article class="news-card">
+                <div class="news-rank">4</div>
+                <h2 class="news-title">美国扣押委内瑞拉总统专机</h2>
+                <p class="news-content">
+                    美国扣押委总统专机。委内瑞拉断交 6 年后出现外交转向，特朗普称美将管理委直到安全过渡。
+                </p>
+                <div class="news-tags">
+                    <span class="tag">专机被扣</span>
+                    <span class="tag">断交 6 年</span>
+                    <span class="tag">外交转向</span>
+                </div>
+            </article>
+
+            <!-- 新闻 5 -->
+            <article class="news-card">
+                <div class="news-rank">5</div>
+                <h2 class="news-title">男子举报纪委干部被诉诽谤 官方回应</h2>
+                <p class="news-content">
+                    男子举报纪委干部后被诉诽谤。官方表示保护合法举报，打击恶意诽谤。
+                </p>
+                <div class="news-tags">
+                    <span class="tag">举报人被诉</span>
+                    <span class="tag">保护合法举报</span>
+                    <span class="tag">维护制度公信力</span>
+                </div>
+            </article>
+        </div>
+
+        <footer>
+            <p>📰 每日热点速递</p>
+            <p>🌐 <a href="https://news.wangchen59.fun" target="_blank">news.wangchen59.fun</a></p>
+        </footer>
+    </div>
+</body>
+</html>

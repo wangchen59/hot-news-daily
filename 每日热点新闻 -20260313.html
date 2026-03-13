@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日热点新闻 - 2026 年 3 月 13 日</title>
+    <style>
+        :root {
+            --primary-color: #e74c3c;
+            --secondary-color: #3498db;
+            --bg-color: #f5f6fa;
+            --card-bg: #ffffff;
+            --text-primary: #2c3e50;
+            --text-secondary: #7f8c8d;
+            --border-color: #ecf0f1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), #c0392b);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header .date {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .news-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .news-card.tech {
+            border-left-color: var(--secondary-color);
+        }
+
+        .news-card.sports {
+            border-left-color: #27ae60;
+        }
+
+        .news-card.finance {
+            border-left-color: #f39c12;
+        }
+
+        .news-category {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .news-category.hot {
+            background-color: #fee;
+            color: var(--primary-color);
+        }
+
+        .news-category.tech {
+            background-color: #e8f4fd;
+            color: var(--secondary-color);
+        }
+
+        .news-category.sports {
+            background-color: #e8f8f0;
+            color: #27ae60;
+        }
+
+        .news-category.finance {
+            background-color: #fef5e7;
+            color: #f39c12;
+        }
+
+        .news-card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+
+        .news-card h2 a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .news-card h2 a:hover {
+            color: var(--primary-color);
+        }
+
+        .news-source {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary-color);
+            color: var(--text-primary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📰 每日热点新闻</h1>
+            <p class="date">2026 年 3 月 13 日 · 星期五</p>
+        </header>
+
+        <h2 class="section-title">🔥 热点聚焦</h2>
+        <div class="news-grid">
+            <article class="news-card">
+                <span class="news-category hot">时政</span>
+                <h2><a href="https://finance.sina.com.cn/zt_d/2026lh" target="_blank">两会重磅丨关于国民经济和社会发展第十五个五年规划纲要决议</a></h2>
+                <div class="news-source">来源：新浪财经</div>
+            </article>
+
+            <article class="news-card finance">
+                <span class="news-category finance">财经</span>
+                <h2><a href="https://finance.sina.com.cn/wm/2026-03-12/doc-inhqtyyi4637084.shtml" target="_blank">央行，重磅会议！继续实施好适度宽松的货币政策，加大逆周期和跨周期调节力度</a></h2>
+                <div class="news-source">来源：新浪财经</div>
+            </article>
+
+            <article class="news-card">
+                <span class="news-category hot">国际</span>
+                <h2><a href="https://finance.sina.com.cn/world/gjcj/2026-03-13/doc-inhqvams1160855.shtml" target="_blank">以色列总理内塔尼亚胡露面，威胁刺杀伊朗新最高领袖！讲话时多地响起警报</a> <span class="badge">热点</span></h2>
+                <div class="news-source">来源：新浪财经</div>
+            </article>
+
+            <article class="news-card">
+                <span class="news-category hot">国际</span>
+                <h2><a href="https://finance.sina.com.cn/roll/2026-03-12/doc-inhqtyyi4633205.shtml" target="_blank">全文！伊朗新任最高领袖发表首次声明</a></h2>
+                <div class="news-source">来源：新浪财经</div>
+            </article>
+
+            <article class="news-card">
+                <span class="news-category hot">社会</span>
+                <h2><a href="https://news.sina.com.cn/s/2026-03-12/doc-inhqtcuq1881241.shtml" target="_blank">网红"王炸姐"直播时突发疾病离世，年仅 39 岁</a></h2>
+                <div class="news-source">来源：新浪网</div>
+            </article>
+        </div>
+
+        <h2 class="section-title">💻 科技前沿</h2>
+        <div class="news-grid">
+            <article class="news-card tech">
+                <span class="news-category tech">科技</span>
+                <h2><a href="https://finance.sina.com.cn/wm/2026-03-13/doc-inhquwcx4224031.shtml" target="_blank">一图速览 | GTC 2026 前瞻：英伟达算力架构革新在即</a></h2>
+                <div class="news-source">来源：新浪财经</div>
+            </article>
+
+            <article class="news-card tech">
+                <span class="news-category tech">科技</span>
+                <h2><a href="https://finance.sina.com.cn/wm/2026-03-13/doc-inhqufhc8249829.shtml" target="_blank">苹果 CEO 库克写信致敬苹果 50 周年，强调"科技应该更个人化"</a></h2>
+                <div class="news-source">来源：新浪财经</div>
+            </article>
+
+            <article class="news-card tech">
+                <span class="news-category tech">科技</span>
+                <h2><a href="https://finance.sina.com.cn/roll/2026-03-13/doc-inhquwcu1187533.shtml" target="_blank">90% 任务是"养虾" 大模型 Token 通胀 谁在收割红利？</a></h2>
+                <div class="news-source">来源：新浪财经</div>
+            </article>
+
+            <article class="news-card tech">
+                <span class="news-category tech">航天</span>
+                <h2><a href="https://finance.sina.com.cn/jjxw/2026-03-13/doc-inhqvamq4136743.shtml" target="_blank">110 吨级液氧煤油发动机力擎二号完成长程试车</a></h2>
+                <div class="news-source">来源：新浪财经</div>
+            </article>
+
+            <article class="news-card tech">
+                <span class="news-category tech">AI</span>
+                <h2><a href="https://k.sina.cn/article_2699180811_a0e23b0b001019r1e.html?from=tech&subch=otech" target="_blank">【No.319】图数室｜2026，人形机器人量产元年？</a></h2>
+                <div class="news-source">来源：新浪财经</div>
+            </article>
+        </div>
+
+        <h2 class="section-title">🏀 体育快讯</h2>
+        <div class="news-grid">
+            <article class="news-card sports">
+                <span class="news-category sports">NBA</span>
+                <h2><a href="https://sports.sina.com.cn/basketball/nba/2026-03-13/doc-inhqvhtt4136494.shtml" target="_blank">连场三双了！约基奇 17 中 9 拿下 31 分 19 板 10 助 3 断 2 帽</a></h2>
+                <div class="news-source">来源：新浪体育</div>
+            </article>
+
+            <article class="news-card sports">
+                <span class="news-category sports">NBA</span>
+                <h2><a href="https://sports.sina.com.cn/basketball/nba/2026-03-13/doc-inhqvhtr7869925.shtml" target="_blank">亚历山大打破张伯伦纪录！俄城全场观众起立鼓掌 齐声高呼"MVP"</a></h2>
+                <div class="news-source">来源：新浪体育</div>
+            </article>
+
+            <article class="news-card sports">
+                <span class="news-category sports">电竞</span>
+                <h2><a href="http://games.sina.com.cn/news/yw/2026-03-12/esports-inhqtqkk1729511.shtml" target="_blank">TYLOO 率先晋级 CS 亚洲邀请赛 2026 正赛</a></h2>
+                <div class="news-source">来源：新浪电竞</div>
+            </article>
+
+            <article class="news-card sports">
+                <span class="news-category sports">冬残奥</span>
+                <h2><a href="https://news.sina.com.cn/zx/gj/2026-03-12/doc-inhqtqkk1736035.shtml" target="_blank">直击冬残奥 | 历史首金！轮椅冰壶混双"姐弟"组合的突破之旅</a></h2>
+                <div class="news-source">来源：新浪网</div>
+            </article>
+        </div>
+
+        <h2 class="section-title">⚖️ 3·15 维权</h2>
+        <div class="news-grid">
+            <article class="news-card">
+                <span class="news-category hot">消费</span>
+                <h2><a href="https://news.sina.com.cn/minsheng/2026-03-13/doc-inhqvamv4154315.shtml" target="_blank">3·15 影子暗访｜说明书里"被消失"的成分</a></h2>
+                <div class="news-source">来源：新浪网</div>
+            </article>
+
+            <article class="news-card">
+                <span class="news-category hot">消费</span>
+                <h2><a href="/newsDetail_forward_32741789" target="_blank">3·15 维权｜消费者称在万表 APP 购表未发货迟迟不退款，澎湃介入后退款</a></h2>
+                <div class="news-source">来源：澎湃新闻</div>
+            </article>
+
+            <article class="news-card finance">
+                <span class="news-category finance">评论</span>
+                <h2><a href="/newsDetail_forward_32759522" target="_blank">人民锐评："苹果税"在中国调降，一个多赢的明智之举</a></h2>
+                <div class="news-source">来源：澎湃新闻</div>
+            </article>
+        </div>
+
+        <h2 class="section-title">🎬 文娱动态</h2>
+        <div class="news-grid">
+            <article class="news-card">
+                <span class="news-category hot">娱乐</span>
+                <h2><a href="https://s.weibo.com/weibo?q=%E9%B9%BF%E6%99%97%E5%AE%98%E5%AE%A3umbro%E8%8C%B5%E5%AE%9D%E5%93%81%E7%89%8C%E4%BB%A3%E8%A8%80%E4%BA%BA" target="_blank">鹿晗官宣 umbro 茵宝品牌代言人</a></h2>
+                <div class="news-source">来源：微博热搜</div>
+            </article>
+
+            <article class="news-card">
+                <span class="news-category hot">娱乐</span>
+                <h2><a href="https://weibo.com/1642591402/QvRLc7HuI" target="_blank">陈绮贞与前男友合同纠纷案获不起诉</a></h2>
+                <div class="news-source">来源：微博</div>
+            </article>
+
+            <article class="news-card finance">
+                <span class="news-category finance">电影</span>
+                <h2><a href="https://news.sina.com.cn/c/2026-03-12/doc-inhqtyyf8335203.shtml" target="_blank">总票房，突破 110 亿！</a></h2>
+                <div class="news-source">来源：新浪网</div>
+            </article>
+        </div>
+
+        <footer>
+            <p>© 2026 每日热点新闻 | 数据来源：新浪财经、澎湃新闻、新浪体育、微博热搜</p>
+            <p>更新时间：2026 年 3 月 13 日 03:56 UTC</p>
+        </footer>
+    </div>
+</body>
+</html>
