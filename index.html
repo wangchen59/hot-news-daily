@@ -6,15 +6,16 @@
     <title>今日热搜 - 2026 年 3 月 13 日</title>
     <style>
         :root {
-            --primary-color: #e74c3c;
-            --secondary-color: #3498db;
-            --bg-color: #f5f6fa;
+            --douyin-color: #fe2c55;
+            --sina-color: #e6162d;
+            --bg-gradient-start: #667eea;
+            --bg-gradient-end: #764ba2;
             --card-bg: #ffffff;
             --text-primary: #2c3e50;
-            --text-secondary: #7f8c8d;
-            --border-radius: 12px;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.15);
+            --text-secondary: #5a6c7d;
+            --border-radius: 16px;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         * {
@@ -24,15 +25,15 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
             min-height: 100vh;
             padding: 20px;
             line-height: 1.6;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -44,24 +45,51 @@
         }
 
         header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
         }
 
         header .date {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 20px;
-            border-radius: 20px;
+            font-size: 1.2rem;
+            opacity: 0.95;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 10px 25px;
+            border-radius: 25px;
             display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            color: white;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 35px 0 20px 0;
+            padding: 15px 25px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .section-title.douyin {
+            background: linear-gradient(135deg, var(--douyin-color), #ff6b8a);
+        }
+
+        .section-title.sina {
+            background: linear-gradient(135deg, var(--sina-color), #ff4757);
+        }
+
+        .section-title .icon {
+            font-size: 1.8rem;
         }
 
         .news-list {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
             gap: 20px;
         }
 
@@ -70,13 +98,15 @@
             border-radius: var(--border-radius);
             padding: 25px;
             box-shadow: var(--shadow);
-            transition: all 0.3s ease;
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .news-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px) scale(1.02);
             box-shadow: var(--shadow-hover);
         }
 
@@ -86,91 +116,165 @@
             left: 0;
             top: 0;
             bottom: 0;
-            width: 5px;
-            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+            width: 6px;
+        }
+
+        .douyin-section .news-card::before {
+            background: linear-gradient(180deg, var(--douyin-color), #ff6b8a);
+        }
+
+        .sina-section .news-card::before {
+            background: linear-gradient(180deg, var(--sina-color), #ff4757);
         }
 
         .news-rank {
             position: absolute;
-            top: 15px;
-            right: 15px;
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, var(--primary-color), #c0392b);
-            color: white;
+            top: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            box-shadow: 0 2px 10px rgba(231, 76, 60, 0.4);
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
         }
 
+        .rank-1 { background: linear-gradient(135deg, #ffd700, #ffaa00); }
+        .rank-2 { background: linear-gradient(135deg, #c0c0c0, #a0a0a0); }
+        .rank-3 { background: linear-gradient(135deg, #cd7f32, #b87333); }
+        .rank-4 { background: linear-gradient(135deg, #667eea, #764ba2); }
+        .rank-5 { background: linear-gradient(135deg, #f093fb, #f5576c); }
+        .rank-6 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+        .rank-7 { background: linear-gradient(135deg, #43e97b, #38f9d7); }
+        .rank-8 { background: linear-gradient(135deg, #fa709a, #fee140); }
+        .rank-9 { background: linear-gradient(135deg, #a8edea, #fed6e3); }
+        .rank-10 { background: linear-gradient(135deg, #d299c2, #fef9d7); }
+
         .news-title {
-            font-size: 1.4rem;
-            font-weight: 600;
+            font-size: 1.15rem;
+            font-weight: 700;
             color: var(--text-primary);
             margin-bottom: 12px;
-            padding-right: 50px;
+            padding-right: 55px;
+            line-height: 1.5;
         }
 
         .news-content {
             color: var(--text-secondary);
-            font-size: 1rem;
+            font-size: 0.95rem;
             margin-bottom: 15px;
-            line-height: 1.8;
+            line-height: 1.7;
+            flex-grow: 1;
         }
 
         .news-tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 6px;
+            padding-top: 12px;
+            border-top: 1px solid #eee;
         }
 
         .tag {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
             font-weight: 500;
+        }
+
+        .douyin-section .tag {
+            background: linear-gradient(135deg, rgba(254, 44, 85, 0.1), rgba(255, 107, 138, 0.1));
+            color: var(--douyin-color);
+            border: 1px solid rgba(254, 44, 85, 0.2);
+        }
+
+        .sina-section .tag {
+            background: linear-gradient(135deg, rgba(230, 22, 45, 0.1), rgba(255, 71, 87, 0.1));
+            color: var(--sina-color);
+            border: 1px solid rgba(230, 22, 45, 0.2);
         }
 
         footer {
             text-align: center;
             color: white;
-            margin-top: 40px;
-            padding: 20px;
-            opacity: 0.8;
-            font-size: 0.9rem;
+            margin-top: 50px;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+        }
+
+        footer p {
+            margin: 8px 0;
+            font-size: 0.95rem;
         }
 
         footer a {
             color: white;
-            text-decoration: underline;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 5px 15px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 20px;
+            transition: all 0.3s;
         }
 
-        @media (max-width: 600px) {
+        footer a:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        @media (max-width: 768px) {
             header h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
-            .news-title {
-                font-size: 1.2rem;
-                padding-right: 0;
+            .news-list {
+                grid-template-columns: 1fr;
             }
 
-            .news-rank {
-                width: 35px;
-                height: 35px;
-                font-size: 1rem;
-                top: 10px;
-                right: 10px;
+            .section-title {
+                font-size: 1.3rem;
+                padding: 12px 18px;
             }
 
             .news-card {
                 padding: 20px;
+            }
+
+            .news-title {
+                font-size: 1.05rem;
+                padding-right: 0;
+                margin-bottom: 10px;
+            }
+
+            .news-rank {
+                width: 38px;
+                height: 38px;
+                font-size: 1.1rem;
+                top: 15px;
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            header {
+                padding: 30px 15px;
+            }
+
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            .date {
+                font-size: 1rem !important;
             }
         }
     </style>
@@ -182,81 +286,178 @@
             <div class="date">📅 2026 年 3 月 13 日</div>
         </header>
 
-        <div class="news-list">
-            <!-- 新闻 1 -->
-            <article class="news-card">
-                <div class="news-rank">1</div>
-                <h2 class="news-title">美国对进口钢铝征收 25% 关税</h2>
-                <p class="news-content">
-                    2025 年 3 月 12 日，美国总统特朗普签署行政命令，对所有进口钢铝产品征收 25% 关税，后对加拿大加征额外关税，总税率达 50%。
-                </p>
-                <div class="news-tags">
-                    <span class="tag">税率 25%-50%</span>
-                    <span class="tag">影响 1473 亿美元进口</span>
-                    <span class="tag">多国反对</span>
-                </div>
-            </article>
+        <!-- 抖音热搜 -->
+        <div class="douyin-section">
+            <div class="section-title douyin">
+                <span class="icon">🎵</span>
+                <span>抖音热搜 Top5</span>
+            </div>
+            <div class="news-list">
+                <!-- 新闻 1 -->
+                <article class="news-card">
+                    <div class="news-rank rank-1">1</div>
+                    <h2 class="news-title">现场视频！伊朗伊斯兰革命卫队称袭击美国油轮</h2>
+                    <p class="news-content">
+                        伊朗伊斯兰革命卫队发布现场视频，声称对袭击美国油轮事件负责。此举加剧了中东地区紧张局势，美方表示将采取相应措施保护航运安全。
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">伊朗承认责任</span>
+                        <span class="tag">发布现场视频</span>
+                        <span class="tag">中东局势紧张</span>
+                        <span class="tag">石油运输安全</span>
+                    </div>
+                </article>
 
-            <!-- 新闻 2 -->
-            <article class="news-card">
-                <div class="news-rank">2</div>
-                <h2 class="news-title">男子为泄愤放火烧自家房屋被判刑</h2>
-                <p class="news-content">
-                    昌吉男子王某因家庭矛盾和工作不顺，为泄愤点燃自家房屋。法院认定放火罪，判处有期徒刑四年。
-                </p>
-                <div class="news-tags">
-                    <span class="tag">放火罪</span>
-                    <span class="tag">有期徒刑四年</span>
-                    <span class="tag">烧自家房也危害公共安全</span>
-                </div>
-            </article>
+                <!-- 新闻 2 -->
+                <article class="news-card">
+                    <div class="news-rank rank-2">2</div>
+                    <h2 class="news-title">"随身带针走哪扎哪"的代表又现场开药方了</h2>
+                    <p class="news-content">
+                        某全国人大代表在两会期间再次展现针灸绝活，随身携带银针现场为参会人员诊疗。该代表连续多年参会期间义务针灸，被网友称为"最接地气代表"。
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">全国人大代表</span>
+                        <span class="tag">现场针灸诊疗</span>
+                        <span class="tag">义务服务</span>
+                        <span class="tag">养生药方</span>
+                    </div>
+                </article>
 
-            <!-- 新闻 3 -->
-            <article class="news-card">
-                <div class="news-rank">3</div>
-                <h2 class="news-title">男子举报纪委干部 400 天后才立案？官方回应</h2>
-                <p class="news-content">
-                    男子举报纪委干部 400 天后收到立案通知。官方回应称程序合规但需提高效率。
-                </p>
-                <div class="news-tags">
-                    <span class="tag">400 天</span>
-                    <span class="tag">程序合规但需提效</span>
-                    <span class="tag">举报时效性受关注</span>
-                </div>
-            </article>
+                <!-- 新闻 3 -->
+                <article class="news-card">
+                    <div class="news-rank rank-3">3</div>
+                    <h2 class="news-title">苹果史上最贵手机要来了</h2>
+                    <p class="news-content">
+                        iPhone 17 系列预计将于 2026 年秋季发布，顶配版本售价可能突破历史纪录。新机将搭载更先进的 AI 功能、改进的摄像头系统和更持久的电池。
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">iPhone 17 系列</span>
+                        <span class="tag">售价创新高</span>
+                        <span class="tag">AI 功能升级</span>
+                        <span class="tag">秋季发布</span>
+                    </div>
+                </article>
 
-            <!-- 新闻 4 -->
-            <article class="news-card">
-                <div class="news-rank">4</div>
-                <h2 class="news-title">美国扣押委内瑞拉总统专机</h2>
-                <p class="news-content">
-                    美国扣押委总统专机。委内瑞拉断交 6 年后出现外交转向，特朗普称美将管理委直到安全过渡。
-                </p>
-                <div class="news-tags">
-                    <span class="tag">专机被扣</span>
-                    <span class="tag">断交 6 年</span>
-                    <span class="tag">外交转向</span>
-                </div>
-            </article>
+                <!-- 新闻 4 -->
+                <article class="news-card">
+                    <div class="news-rank rank-4">4</div>
+                    <h2 class="news-title">"小单方治大病"宋兆普：生姜白糖绿茶治肠胃病</h2>
+                    <p class="news-content">
+                        全国人大代表、中医专家宋兆普在两会期间分享养生偏方，推荐生姜白糖绿茶组合调理肠胃。该方子简单易行，引发网友热议。
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">人大代表推荐</span>
+                        <span class="tag">生姜白糖绿茶</span>
+                        <span class="tag">调理肠胃</span>
+                        <span class="tag">因人而异</span>
+                    </div>
+                </article>
 
-            <!-- 新闻 5 -->
-            <article class="news-card">
-                <div class="news-rank">5</div>
-                <h2 class="news-title">男子举报纪委干部被诉诽谤 官方回应</h2>
-                <p class="news-content">
-                    男子举报纪委干部后被诉诽谤。官方表示保护合法举报，打击恶意诽谤。
-                </p>
-                <div class="news-tags">
-                    <span class="tag">举报人被诉</span>
-                    <span class="tag">保护合法举报</span>
-                    <span class="tag">维护制度公信力</span>
-                </div>
-            </article>
+                <!-- 新闻 5 -->
+                <article class="news-card">
+                    <div class="news-rank rank-5">5</div>
+                    <h2 class="news-title">饭店的寒假工，服务员提醒出差错！</h2>
+                    <p class="news-content">
+                        某饭店寒假工服务员因工作经验不足，在接待顾客时出现服务差错，引发顾客投诉。事件反映餐饮行业短期用工培训不足问题。
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">寒假工服务员</span>
+                        <span class="tag">服务差错</span>
+                        <span class="tag">培训不足</span>
+                        <span class="tag">加强培训</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- 新浪热搜 -->
+        <div class="sina-section">
+            <div class="section-title sina">
+                <span class="icon">📰</span>
+                <span>新浪热搜 Top5</span>
+            </div>
+            <div class="news-list">
+                <!-- 新闻 6 -->
+                <article class="news-card">
+                    <div class="news-rank rank-6">6</div>
+                    <h2 class="news-title">微信朋友圈编辑</h2>
+                    <p class="news-content">
+                        微信测试朋友圈内容编辑功能，用户发布后可在规定时间内修改文字内容。该功能此前多次被用户呼吁，此次测试引发广泛关注。
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">朋友圈可编辑</span>
+                        <span class="tag">功能测试</span>
+                        <span class="tag">限时修改</span>
+                        <span class="tag">分批次开放</span>
+                    </div>
+                </article>
+
+                <!-- 新闻 7 -->
+                <article class="news-card">
+                    <div class="news-rank rank-7">7</div>
+                    <h2 class="news-title">国产手机涨价 2000 元</h2>
+                    <p class="news-content">
+                        多家国产手机品牌宣布 2026 年新款旗舰机型价格上调，涨幅约 2000 元。涨价原因包括芯片成本上涨、AI 功能增加等。
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">国产旗舰涨价</span>
+                        <span class="tag">涨幅 2000 元</span>
+                        <span class="tag">芯片成本</span>
+                        <span class="tag">高端化策略</span>
+                    </div>
+                </article>
+
+                <!-- 新闻 8 -->
+                <article class="news-card">
+                    <div class="news-rank rank-8">8</div>
+                    <h2 class="news-title">这个春天再出发</h2>
+                    <p class="news-content">
+                        春暖花开之际，各地推出春季旅游优惠活动，鼓励民众出游。文旅部发布春季旅游指南，推荐多条精品线路，提振春季消费市场。
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">春季旅游</span>
+                        <span class="tag">优惠活动</span>
+                        <span class="tag">精品线路</span>
+                        <span class="tag">提振消费</span>
+                    </div>
+                </article>
+
+                <!-- 新闻 9 -->
+                <article class="news-card">
+                    <div class="news-rank rank-9">9</div>
+                    <h2 class="news-title">筑牢中小股民权益守护防线</h2>
+                    <p class="news-content">
+                        证监会发布新规，加强中小投资者权益保护，完善上市公司信息披露制度，加大对违法违规行为的处罚力度。
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">证监会新规</span>
+                        <span class="tag">投资者保护</span>
+                        <span class="tag">信息披露</span>
+                        <span class="tag">加大处罚</span>
+                    </div>
+                </article>
+
+                <!-- 新闻 10 -->
+                <article class="news-card">
+                    <div class="news-rank rank-10">10</div>
+                    <h2 class="news-title">冻干草莓 农药</h2>
+                    <p class="news-content">
+                        3·15 前夕，部分冻干草莓产品被检出农药残留超标，涉及多个品牌。市场监管部门已介入调查，要求下架相关产品。
+                    </p>
+                    <div class="news-tags">
+                        <span class="tag">农药超标</span>
+                        <span class="tag">多个品牌</span>
+                        <span class="tag">市场监管调查</span>
+                        <span class="tag">注意选购</span>
+                    </div>
+                </article>
+            </div>
         </div>
 
         <footer>
-            <p>📰 每日热点速递</p>
+            <p>📰 每日热点速递 · 抖音 & 新浪热搜</p>
             <p>🌐 <a href="https://news.wangchen59.fun" target="_blank">news.wangchen59.fun</a></p>
+            <p style="margin-top: 15px; opacity: 0.8; font-size: 0.85rem;">© 2026 Hot News Daily</p>
         </footer>
     </div>
 </body>
