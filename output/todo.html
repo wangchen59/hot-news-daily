@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Manager - 任务管理器</title>
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Bar -->
+        <header class="top-bar">
+            <div class="logo">
+                <h1>Todo Manager</h1>
+            </div>
+            <button class="btn-primary" id="btn-new-task">
+                <span class="icon">+</span>
+                新建任务
+            </button>
+        </header>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <select id="filter-status" class="filter-select">
+                <option value="all">全部状态</option>
+                <option value="active">进行中</option>
+                <option value="completed">已完成</option>
+            </select>
+            <select id="filter-category" class="filter-select">
+                <option value="all">全部分类</option>
+                <option value="work">工作</option>
+                <option value="personal">个人</option>
+                <option value="study">学习</option>
+                <option value="other">其他</option>
+            </select>
+            <select id="filter-priority" class="filter-select">
+                <option value="all">全部优先级</option>
+                <option value="high">高</option>
+                <option value="medium">中</option>
+                <option value="low">低</option>
+            </select>
+            <input type="text" id="search-input" class="search-input" placeholder="搜索任务...">
+        </div>
+
+        <!-- Task List -->
+        <main class="task-list" id="task-list">
+            <!-- Task cards will be rendered here by JS -->
+        </main>
+
+        <!-- Modal for Create/Edit Task -->
+        <div class="modal-overlay" id="modal-overlay">
+            <div class="modal" id="task-modal">
+                <div class="modal-header">
+                    <h2 id="modal-title">新建任务</h2>
+                    <button class="btn-close" id="btn-close-modal">×</button>
+                </div>
+                <form id="task-form">
+                    <div class="form-group">
+                        <label for="task-title">任务标题 *</label>
+                        <input type="text" id="task-title" required placeholder="输入任务标题">
+                    </div>
+                    <div class="form-group">
+                        <label for="task-category">分类</label>
+                        <select id="task-category">
+                            <option value="work">工作</option>
+                            <option value="personal">个人</option>
+                            <option value="study">学习</option>
+                            <option value="other" selected>其他</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-priority">优先级</label>
+                        <select id="task-priority">
+                            <option value="high">高</option>
+                            <option value="medium" selected>中</option>
+                            <option value="low">低</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-due-date">截止日期</label>
+                        <input type="date" id="task-due-date">
+                    </div>
+                    <input type="hidden" id="task-id">
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="btn-cancel">取消</button>
+                        <button type="submit" class="btn-primary">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal -->
+        <div class="modal-overlay" id="delete-modal-overlay">
+            <div class="modal modal-small" id="delete-modal">
+                <div class="modal-header">
+                    <h2>确认删除</h2>
+                    <button class="btn-close" id="btn-close-delete-modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <p>确定要删除这个任务吗？此操作不可撤销。</p>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" id="btn-cancel-delete">取消</button>
+                    <button type="button" class="btn-danger" id="btn-confirm-delete">删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/todo.js"></script>
+</body>
+</html>
